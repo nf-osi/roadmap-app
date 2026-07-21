@@ -190,7 +190,7 @@ export default function App() {
   return (
     <div className="min-h-screen">
       {/* Masthead */}
-      <div ref={headerRef} className="sticky top-0 z-40 bg-white pb-10">
+      <div ref={headerRef} className="sticky top-0 z-40 bg-white pb-10 border-b" style={{ borderColor: 'rgba(64,75,99,0.15)' }}>
       <div className="max-w-7xl mx-auto px-10 pt-3 flex items-center justify-between text-sm">
         <Link
           to="/"
