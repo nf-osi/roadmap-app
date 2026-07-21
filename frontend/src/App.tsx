@@ -190,7 +190,7 @@ export default function App() {
   return (
     <div className="min-h-screen">
       {/* Masthead */}
-      <div ref={headerRef} className="sticky top-0 z-40 bg-white border-b border-[#e2e2dc]">
+      <div ref={headerRef} className="sticky top-0 z-40 bg-white pb-10">
       <div className="max-w-7xl mx-auto px-10 pt-3 flex items-center justify-between text-sm">
         <Link
           to="/"
@@ -231,31 +231,31 @@ export default function App() {
         </div>
 
         {/* Tabs — centered in the blank header space */}
-        <div role="tablist" aria-label="View" className="flex-1 flex justify-center gap-[30px]">
-          <button
-            role="tab"
-            aria-selected={view === 'grid'}
-            onClick={() => setView('grid')}
-            className="font-display font-medium text-[15px] py-3.5 border-b-2 -mb-px transition-colors"
-            style={{
-              color: view === 'grid' ? '#404b63' : '#8a8f98',
-              borderBottomColor: view === 'grid' ? '#1b7eab' : 'transparent',
-            }}
-          >
-            Roadmap ideas
-          </button>
-          <button
-            role="tab"
-            aria-selected={view === 'timeline'}
-            onClick={() => setView('timeline')}
-            className="font-display font-medium text-[15px] py-3.5 border-b-2 -mb-px transition-colors"
-            style={{
-              color: view === 'timeline' ? '#404b63' : '#8a8f98',
-              borderBottomColor: view === 'timeline' ? '#1b7eab' : 'transparent',
-            }}
-          >
-            Timeline
-          </button>
+        <div
+          role="tablist"
+          aria-label="View"
+          className="flex-1 flex justify-center"
+        >
+          <div className="flex gap-1 p-1 rounded-full" style={{ background: '#f1f1ec' }}>
+            <button
+              role="tab"
+              aria-selected={view === 'grid'}
+              onClick={() => setView('grid')}
+              className={`font-display text-[15px] py-2 px-4 rounded-full transition-colors ${view === 'grid' ? 'font-bold bg-white shadow-sm' : 'font-medium hover:bg-[rgba(64,75,99,0.08)]'}`}
+              style={{ color: view === 'grid' ? '#404b63' : '#8a8f98' }}
+            >
+              Roadmap ideas
+            </button>
+            <button
+              role="tab"
+              aria-selected={view === 'timeline'}
+              onClick={() => setView('timeline')}
+              className={`font-display text-[15px] py-2 px-4 rounded-full transition-colors ${view === 'timeline' ? 'font-bold bg-white shadow-sm' : 'font-medium hover:bg-[rgba(64,75,99,0.08)]'}`}
+              style={{ color: view === 'timeline' ? '#404b63' : '#8a8f98' }}
+            >
+              Timeline
+            </button>
+          </div>
         </div>
 
         <div className="flex items-center gap-3 pb-3 flex-shrink-0">
