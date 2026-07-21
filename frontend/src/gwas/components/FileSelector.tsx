@@ -72,7 +72,7 @@ export default function FileSelector({ files, onChange }: Props) {
 
   return (
     <section>
-      <h2 className="font-display font-semibold text-[15px] mb-1" style={{ color: '#16181c' }}>
+      <h2 className="font-display font-semibold text-[15px] mb-1" style={{ color: '#404b63' }}>
         1 · Select input files
       </h2>
       <p className="text-sm mb-4" style={{ color: '#8a8f98' }}>
@@ -92,13 +92,13 @@ export default function FileSelector({ files, onChange }: Props) {
           placeholder="syn12345678  syn23456789, syn34567890&#10;(one or more ids)"
           aria-label="Synapse file ids"
           className="flex-1 rounded-lg border px-3 py-2 text-sm font-mono resize-y"
-          style={{ borderColor: '#cfd0c9', color: '#16181c' }}
+          style={{ borderColor: '#cfd0c9', color: '#404b63' }}
         />
         <button
           onClick={addFiles}
           disabled={busy}
           className="font-display font-medium text-sm px-4 py-2 rounded-lg flex items-center gap-1.5 disabled:opacity-40 flex-shrink-0"
-          style={{ background: '#16181c', color: '#f6f6f3' }}
+          style={{ background: '#404b63', color: '#f6f6f3' }}
         >
           {busy ? <Loader2 className="w-4 h-4 animate-spin" /> : <Plus className="w-4 h-4" />}
           Add
@@ -122,7 +122,7 @@ export default function FileSelector({ files, onChange }: Props) {
             <li key={f.id} className="flex items-center gap-3 px-3 py-2.5">
               <FileText className="w-4 h-4 flex-shrink-0" style={{ color: '#8a8f98' }} />
               <div className="min-w-0 flex-1">
-                <div className="text-sm font-medium truncate" style={{ color: '#16181c' }}>
+                <div className="text-sm font-medium truncate" style={{ color: '#404b63' }}>
                   {f.name}
                 </div>
                 <div className="text-[12px] font-mono" style={{ color: '#8a8f98' }}>

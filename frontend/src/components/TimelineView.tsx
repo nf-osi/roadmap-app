@@ -62,12 +62,12 @@ export default function TimelineView({ ideas, votedIds, isLoggedIn, onVote, onSe
               {group.past ? (
                 <div
                   className="w-3 h-3 rounded-full flex-shrink-0"
-                  style={{ background: '#16181c' }}
+                  style={{ background: '#404b63' }}
                 />
               ) : (
                 <div
                   className="w-3 h-3 rounded-full border-2 flex-shrink-0"
-                  style={{ borderColor: '#16181c', background: 'transparent' }}
+                  style={{ borderColor: '#404b63', background: 'transparent' }}
                 />
               )}
               {!isLast && (
@@ -80,7 +80,7 @@ export default function TimelineView({ ideas, votedIds, isLoggedIn, onVote, onSe
               <div className="flex items-center gap-3 mb-4">
                 <span
                   className="font-display font-medium text-[15px] uppercase tracking-[0.1em]"
-                  style={{ color: group.past ? '#8a8f98' : '#16181c' }}
+                  style={{ color: group.past ? '#8a8f98' : '#404b63' }}
                 >
                   {group.label}
                 </span>
@@ -168,7 +168,7 @@ function TimelineRow({ idea, voted, isLoggedIn, onVote, onSelect, onRequestLogin
           </div>
           <div
             className="font-display font-semibold text-[28px] leading-none tracking-[-0.03em]"
-            style={{ color: idea.votes === 0 ? '#d4d4cf' : muted ? '#8a8f98' : '#16181c' }}
+            style={{ color: idea.votes === 0 ? '#d4d4cf' : muted ? '#8a8f98' : '#404b63' }}
           >
             {idea.votes}
           </div>
@@ -181,7 +181,7 @@ function TimelineRow({ idea, voted, isLoggedIn, onVote, onSelect, onRequestLogin
         <div>
           <h3
             className="font-display font-medium text-[16px] leading-snug tracking-[-0.01em]"
-            style={{ color: muted ? '#54585f' : '#16181c' }}
+            style={{ color: muted ? '#54585f' : '#404b63' }}
           >
             {idea.title}
           </h3>

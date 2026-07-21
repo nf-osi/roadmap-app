@@ -40,7 +40,7 @@ function AgentCard({ agent }: { agent: AgentMeta }) {
         )}
       </div>
 
-      <h3 className="font-display font-semibold text-[17px] mb-1.5" style={{ color: '#16181c' }}>
+      <h3 className="font-display font-semibold text-[17px] mb-1.5" style={{ color: '#404b63' }}>
         {agent.name}
       </h3>
       <p className="text-sm leading-relaxed flex-1" style={{ color: '#54585f' }}>
@@ -87,7 +87,7 @@ function SubmitAgentCard() {
       >
         <Plus className="w-5 h-5 transition-transform group-hover:scale-110" style={{ color: '#0d6e62' }} />
       </div>
-      <h3 className="font-display font-semibold text-[16px] mb-1" style={{ color: '#16181c' }}>
+      <h3 className="font-display font-semibold text-[16px] mb-1" style={{ color: '#404b63' }}>
         Submit a new agent
       </h3>
       <p className="text-sm leading-relaxed" style={{ color: '#54585f' }}>
@@ -116,8 +116,8 @@ export default function AgentGallery() {
               href="https://nf.synapse.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 hover:underline"
-              style={{ color: '#8a8f98' }}
+              className="font-display font-semibold inline-flex items-center gap-1.5 hover:underline"
+              style={{ color: '#404b63' }}
             >
               NF Data Portal <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
             </a>
@@ -125,7 +125,7 @@ export default function AgentGallery() {
           <div className="font-display font-medium text-[15px] uppercase tracking-[0.18em]" style={{ color: '#8a8f98' }}>
             NF Data Portal
           </div>
-          <h1 className="font-display font-semibold text-[42px] leading-[1] tracking-[-0.025em] mt-1" style={{ color: '#16181c' }}>
+          <h1 className="font-display font-semibold text-[42px] leading-[1] tracking-[-0.025em] mt-1" style={{ color: '#404b63' }}>
             Agent Gallery
           </h1>
           <p className="text-sm mt-3 max-w-2xl" style={{ color: '#54585f' }}>

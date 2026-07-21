@@ -24,7 +24,7 @@ export default function FileCheckPanel({ result }: { result: FileCheckResult }) 
   return (
     <div className="rounded-xl border p-5" style={{ borderColor: '#e2e2dc', background: '#fff' }}>
       <div className="flex items-start justify-between gap-4 mb-3">
-        <p className="text-sm" style={{ color: '#16181c' }}>{result.summary}</p>
+        <p className="text-sm" style={{ color: '#404b63' }}>{result.summary}</p>
         <StatusBadge status={result.status} />
       </div>
 
@@ -66,7 +66,7 @@ export default function FileCheckPanel({ result }: { result: FileCheckResult }) 
                 >
                   {ROLE_LABEL[r.assigned_role]}
                 </span>
-                <span className="font-medium" style={{ color: '#16181c' }}>{r.file_name}</span>
+                <span className="font-medium" style={{ color: '#404b63' }}>{r.file_name}</span>
                 <span className="text-[12px]" style={{ color: '#8a8f98' }}>
                   · {Math.round(r.confidence * 100)}% · {r.reason}
                 </span>
@@ -95,7 +95,7 @@ export default function FileCheckPanel({ result }: { result: FileCheckResult }) 
                     {issue.category === 'appropriateness' ? 'Fit' : 'Input'}
                   </span>
                 )}
-                <span style={{ color: '#16181c' }}>{issue.message}</span>
+                <span style={{ color: '#404b63' }}>{issue.message}</span>
                 {issue.suggestion && (
                   <span className="block text-[13px] mt-0.5" style={{ color: '#54585f' }}>
                     → {issue.suggestion}
@@ -112,7 +112,7 @@ export default function FileCheckPanel({ result }: { result: FileCheckResult }) 
         <div className="mt-3 space-y-2">
           {result.questions.map((q) => (
             <div key={q.id} className="rounded-lg px-3 py-2 text-sm" style={{ background: '#f6ecdc' }}>
-              <p style={{ color: '#16181c' }}>{q.question}</p>
+              <p style={{ color: '#404b63' }}>{q.question}</p>
               {q.options && q.options.length > 0 && (
                 <p className="text-[13px] mt-1" style={{ color: '#54585f' }}>
                   Options: {q.options.join(' · ')}

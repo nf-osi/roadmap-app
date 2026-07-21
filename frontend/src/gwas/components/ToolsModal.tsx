@@ -27,7 +27,7 @@ export default function ToolsModal({ onClose }: { onClose: () => void }) {
       <div className="bg-white rounded-xl shadow-2xl w-full max-w-2xl mb-10">
         <div className="sticky top-0 bg-white flex items-start justify-between gap-4 p-6 border-b rounded-t-xl" style={{ borderColor: '#e2e2dc' }}>
           <div>
-            <h2 id="tools-modal-title" className="font-display font-semibold text-[20px]" style={{ color: '#16181c' }}>
+            <h2 id="tools-modal-title" className="font-display font-semibold text-[20px]" style={{ color: '#404b63' }}>
               Tools &amp; post-GWAS next steps
             </h2>
             <p className="text-sm mt-0.5" style={{ color: '#8a8f98' }}>
@@ -42,7 +42,7 @@ export default function ToolsModal({ onClose }: { onClose: () => void }) {
         <div className="p-6 space-y-6">
           {/* Guardrails */}
           <div className="rounded-lg px-4 py-3" style={{ background: '#e8f3f9' }}>
-            <p className="text-[13px]" style={{ color: '#16181c' }}>
+            <p className="text-[13px]" style={{ color: '#404b63' }}>
               <span className="font-medium">Cost &amp; safety limits.</span> Each run is capped
               by a fixed per-run cost budget and a maximum number of steps. If the agent
               reaches either limit it stops automatically — so an analysis can't run away or
@@ -63,7 +63,7 @@ export default function ToolsModal({ onClose }: { onClose: () => void }) {
               {GWAS_TOOLS.map((t) => (
                 <div key={t.name} className="rounded-lg border p-4" style={{ borderColor: '#e2e2dc' }}>
                   <div className="flex items-center gap-2 flex-wrap mb-1.5">
-                    <span className="font-display font-semibold text-[14px]" style={{ color: '#16181c' }}>{t.name}</span>
+                    <span className="font-display font-semibold text-[14px]" style={{ color: '#404b63' }}>{t.name}</span>
                     <span
                       className="font-display text-[10px] uppercase tracking-[0.06em] px-2 py-0.5 rounded"
                       style={{ background: `${CATEGORY_COLOR[t.category]}14`, color: CATEGORY_COLOR[t.category] }}
@@ -76,9 +76,9 @@ export default function ToolsModal({ onClose }: { onClose: () => void }) {
                       </span>
                     )}
                   </div>
-                  <p className="text-[13px] mb-2" style={{ color: '#16181c' }}>{t.details}</p>
+                  <p className="text-[13px] mb-2" style={{ color: '#404b63' }}>{t.details}</p>
                   <p className="text-[13px]" style={{ color: '#54585f' }}>
-                    <span className="font-medium" style={{ color: '#16181c' }}>Good for: </span>{t.goodFor}
+                    <span className="font-medium" style={{ color: '#404b63' }}>Good for: </span>{t.goodFor}
                   </p>
                   {t.link && (
                     <a href={t.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[13px] mt-2 hover:underline" style={{ color: '#125e81' }}>
@@ -97,7 +97,7 @@ export default function ToolsModal({ onClose }: { onClose: () => void }) {
             </h3>
             <p className="text-[13px] mb-3" style={{ color: '#54585f' }}>
               The agent currently runs association, plots, and a first-pass narrative. It doesn't
-              <span className="font-medium" style={{ color: '#16181c' }}> yet </span>
+              <span className="font-medium" style={{ color: '#404b63' }}> yet </span>
               orchestrate the steps below — recommended follow-ups, and good candidates for
               future agent steps.
             </p>
@@ -106,11 +106,11 @@ export default function ToolsModal({ onClose }: { onClose: () => void }) {
                 <div key={s.name} className="rounded-lg p-4" style={{ background: '#f6f6f3' }}>
                   <div className="flex items-center gap-2 mb-1">
                     <ArrowRight className="w-4 h-4" style={{ color: '#0d6e62' }} />
-                    <span className="font-display font-semibold text-[14px]" style={{ color: '#16181c' }}>{s.name}</span>
+                    <span className="font-display font-semibold text-[14px]" style={{ color: '#404b63' }}>{s.name}</span>
                   </div>
                   <p className="text-[13px]" style={{ color: '#54585f' }}>{s.what}</p>
                   <p className="text-[13px] mt-0.5" style={{ color: '#54585f' }}>
-                    <span className="font-medium" style={{ color: '#16181c' }}>Why: </span>{s.why}
+                    <span className="font-medium" style={{ color: '#404b63' }}>Why: </span>{s.why}
                   </p>
                   <div className="flex items-center gap-3 mt-1.5">
                     <span className="font-display text-[11px] px-2 py-0.5 rounded" style={{ background: '#fff', color: '#54585f' }}>
