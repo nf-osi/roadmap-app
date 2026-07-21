@@ -203,8 +203,8 @@ export default function App() {
           href="https://nf.synapse.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 hover:underline"
-          style={{ color: '#8a8f98' }}
+          className="font-display font-semibold inline-flex items-center gap-1.5 hover:underline"
+          style={{ color: '#404b63' }}
         >
           NF Data Portal <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
         </a>
@@ -222,10 +222,10 @@ export default function App() {
               NF Data Portal
             </div>
             <h1
-              className="font-display font-semibold text-[46px] leading-[.98] tracking-[-0.025em] mt-1"
-              style={{ color: '#16181c' }}
+              className="font-display font-semibold text-[46px] leading-[.98] tracking-[-0.025em] mt-1 whitespace-nowrap"
+              style={{ color: '#404b63' }}
             >
-              Community<br />Roadmap
+              Community Roadmap
             </h1>
           </div>
         </div>
@@ -238,7 +238,7 @@ export default function App() {
             onClick={() => setView('grid')}
             className="font-display font-medium text-[15px] py-3.5 border-b-2 -mb-px transition-colors"
             style={{
-              color: view === 'grid' ? '#16181c' : '#8a8f98',
+              color: view === 'grid' ? '#404b63' : '#8a8f98',
               borderBottomColor: view === 'grid' ? '#1b7eab' : 'transparent',
             }}
           >
@@ -250,7 +250,7 @@ export default function App() {
             onClick={() => setView('timeline')}
             className="font-display font-medium text-[15px] py-3.5 border-b-2 -mb-px transition-colors"
             style={{
-              color: view === 'timeline' ? '#16181c' : '#8a8f98',
+              color: view === 'timeline' ? '#404b63' : '#8a8f98',
               borderBottomColor: view === 'timeline' ? '#1b7eab' : 'transparent',
             }}
           >
@@ -277,9 +277,9 @@ export default function App() {
               <button
                 onClick={() => { setFormInitialTitle(''); setShowForm(true); }}
                 className="font-display font-medium text-sm px-[22px] py-[11px] rounded-full transition-colors"
-                style={{ background: '#16181c', color: '#f6f6f3' }}
+                style={{ background: '#404b63', color: '#f6f6f3' }}
                 onMouseEnter={e => (e.currentTarget.style.background = '#1b7eab')}
-                onMouseLeave={e => (e.currentTarget.style.background = '#16181c')}
+                onMouseLeave={e => (e.currentTarget.style.background = '#404b63')}
               >
                 <Lightbulb className="w-4 h-4 inline-block mr-1.5" />Submit idea
               </button>
@@ -295,9 +295,9 @@ export default function App() {
             <a
               href={loginUrl()}
               className="font-display font-medium text-sm px-[22px] py-[11px] rounded-full transition-colors"
-              style={{ background: '#16181c', color: '#f6f6f3' }}
+              style={{ background: '#404b63', color: '#f6f6f3' }}
               onMouseEnter={e => (e.currentTarget.style.background = '#1b7eab')}
-              onMouseLeave={e => (e.currentTarget.style.background = '#16181c')}
+              onMouseLeave={e => (e.currentTarget.style.background = '#404b63')}
             >
               Log in
             </a>
@@ -372,7 +372,7 @@ export default function App() {
                 >
                   {filteredIdeas.length} idea{filteredIdeas.length !== 1 ? 's' : ''} · sorted by {sortBy === 'votes' ? 'votes' : 'newest'}
                 </div>
-                <div className="border-t-2" style={{ borderColor: '#16181c' }}>
+                <div className="border-t-2" style={{ borderColor: '#404b63' }}>
                   {pagedIdeas.map((idea) => (
                     <IdeaCard
                       key={idea.id}
@@ -413,7 +413,7 @@ export default function App() {
                             aria-current={currentPage === page ? 'page' : undefined}
                             className="font-display font-semibold text-sm w-9 h-9 rounded-lg border transition-all"
                             style={currentPage === page
-                              ? { background: '#16181c', color: '#f6f6f3', borderColor: '#16181c', boxShadow: '0 2px 8px rgba(22,24,28,0.18)' }
+                              ? { background: '#404b63', color: '#f6f6f3', borderColor: '#404b63', boxShadow: '0 2px 8px rgba(22,24,28,0.18)' }
                               : { borderColor: '#e2e2dc', color: '#54585f', background: 'transparent' }}
                           >
                             {page}

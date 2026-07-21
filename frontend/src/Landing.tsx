@@ -42,7 +42,7 @@ function OptionCard({ to, eyebrow, title, description, icon: Icon, accent }: Opt
       <div className="font-display text-[12px] uppercase tracking-[0.12em] mb-1" style={{ color: '#8a8f98' }}>
         {eyebrow}
       </div>
-      <h2 className="font-display font-semibold text-[26px] tracking-[-0.02em] mb-2 flex items-center gap-2" style={{ color: '#16181c' }}>
+      <h2 className="font-display font-semibold text-[26px] tracking-[-0.02em] mb-2 flex items-center gap-2" style={{ color: '#404b63' }}>
         {title}
         <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" style={{ color: '#8a8f98' }} />
       </h2>
@@ -74,9 +74,9 @@ function AuthControl({ user, onLogout }: { user: User | null; onLogout: () => vo
     <a
       href={loginUrl()}
       className="font-display font-medium text-sm px-[22px] py-[11px] rounded-full transition-colors"
-      style={{ background: '#16181c', color: '#f6f6f3' }}
+      style={{ background: '#404b63', color: '#f6f6f3' }}
       onMouseEnter={(e) => (e.currentTarget.style.background = '#1b7eab')}
-      onMouseLeave={(e) => (e.currentTarget.style.background = '#16181c')}
+      onMouseLeave={(e) => (e.currentTarget.style.background = '#404b63')}
     >
       Log in with Synapse
     </a>
@@ -97,7 +97,7 @@ export default function Landing() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: '#fafaf7' }}>
+    <div className="min-h-screen flex flex-col" style={{ background: 'rgba(18,94,129,0.05)' }}>
       <header className="max-w-4xl w-full mx-auto px-10 pt-6 flex items-center justify-end">
         <AuthControl user={user} onLogout={handleLogout} />
       </header>
@@ -108,7 +108,7 @@ export default function Landing() {
             NF Data Portal
           </span>
         </div>
-        <h1 className="font-display font-semibold text-[52px] leading-[1] tracking-[-0.03em] mb-4" style={{ color: '#16181c' }}>
+        <h1 className="font-display font-semibold text-[52px] leading-[1] tracking-[-0.03em] mb-4" style={{ color: '#404b63' }}>
           Community Tools
         </h1>
         <p className="text-base max-w-xl mb-12" style={{ color: '#54585f' }}>

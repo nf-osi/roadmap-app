@@ -60,7 +60,7 @@ export default function IdeaCard({ idea, voted, isLoggedIn, onVote, onSelect, on
           </div>
           <div
             className="font-display font-semibold text-[42px] leading-none tracking-[-0.03em]"
-            style={{ color: idea.votes === 0 ? '#d4d4cf' : '#16181c' }}
+            style={{ color: idea.votes === 0 ? '#d4d4cf' : '#404b63' }}
           >
             {idea.votes}
           </div>
@@ -73,7 +73,7 @@ export default function IdeaCard({ idea, voted, isLoggedIn, onVote, onSelect, on
         <div>
           <h3
             className="font-display font-medium text-[21px] leading-[1.15] tracking-[-0.01em]"
-            style={{ color: '#16181c' }}
+            style={{ color: '#404b63' }}
           >
             {idea.title}
           </h3>

@@ -53,7 +53,7 @@ function RailButton({
       onMouseLeave={() => setHovered(false)}
       className="flex justify-between items-baseline w-full text-left text-[14.5px] py-1.5 transition-all duration-100 focus:outline-none"
       style={{
-        color: active ? '#16181c' : hovered ? '#16181c' : '#54585f',
+        color: active ? '#404b63' : hovered ? '#404b63' : '#54585f',
         fontWeight: active ? 600 : 400,
         paddingLeft: hovered ? '5px' : '0',
       }}

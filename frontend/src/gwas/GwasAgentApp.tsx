@@ -130,7 +130,7 @@ export default function GwasAgentApp() {
         style={{ borderColor: '#e2e2dc' }}
       >
         <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-0.5" style={{ color: '#0d6e62' }} />
-        <span className="hidden 2xl:inline font-display font-medium text-sm" style={{ color: '#16181c' }}>
+        <span className="hidden 2xl:inline font-display font-medium text-sm" style={{ color: '#404b63' }}>
           Agent Gallery
         </span>
       </Link>
@@ -144,7 +144,7 @@ export default function GwasAgentApp() {
               <div className="font-display font-medium text-[15px] uppercase tracking-[0.18em]" style={{ color: '#8a8f98' }}>
                 NF Data Portal · Agents
               </div>
-              <h1 className="font-display font-semibold text-[40px] leading-[.98] tracking-[-0.025em] mt-1" style={{ color: '#16181c' }}>
+              <h1 className="font-display font-semibold text-[40px] leading-[.98] tracking-[-0.025em] mt-1" style={{ color: '#404b63' }}>
                 GWAS Agent
               </h1>
             </div>
@@ -156,7 +156,7 @@ export default function GwasAgentApp() {
               <a
                 href={loginUrl()}
                 className="font-display font-medium text-sm px-[22px] py-[11px] rounded-full"
-                style={{ background: '#16181c', color: '#f6f6f3' }}
+                style={{ background: '#404b63', color: '#f6f6f3' }}
               >
                 Log in with Synapse
               </a>
@@ -170,7 +170,7 @@ export default function GwasAgentApp() {
 
         {/* Params */}
         <section>
-          <h2 className="font-display font-semibold text-[15px] mb-3" style={{ color: '#16181c' }}>
+          <h2 className="font-display font-semibold text-[15px] mb-3" style={{ color: '#404b63' }}>
             2 · Analysis settings
           </h2>
 
@@ -181,7 +181,7 @@ export default function GwasAgentApp() {
                 value={traitType}
                 onChange={(e) => setTraitType(e.target.value as TraitType)}
                 className="mt-1 w-full rounded-lg border px-3 py-2 text-sm"
-                style={{ borderColor: '#cfd0c9', color: '#16181c' }}
+                style={{ borderColor: '#cfd0c9', color: '#404b63' }}
               >
                 <option value="binary">Binary (case/control)</option>
                 <option value="quantitative">Quantitative</option>
@@ -194,7 +194,7 @@ export default function GwasAgentApp() {
                 onChange={(e) => setPhenoName(e.target.value)}
                 placeholder="PHENO1"
                 className="mt-1 w-full rounded-lg border px-3 py-2 text-sm font-mono"
-                style={{ borderColor: '#cfd0c9', color: '#16181c' }}
+                style={{ borderColor: '#cfd0c9', color: '#404b63' }}
               />
             </label>
             <label className="block">
@@ -204,7 +204,7 @@ export default function GwasAgentApp() {
                 onChange={(e) => setOutputParent(e.target.value)}
                 placeholder="syn200…"
                 className="mt-1 w-full rounded-lg border px-3 py-2 text-sm font-mono"
-                style={{ borderColor: '#cfd0c9', color: '#16181c' }}
+                style={{ borderColor: '#cfd0c9', color: '#404b63' }}
               />
             </label>
           </div>
@@ -219,7 +219,7 @@ export default function GwasAgentApp() {
               rows={3}
               placeholder="Anything the agent should know — e.g. analysis preferences (covariates to prioritize, MAF/QC thresholds, subset to specific chromosomes) or output preferences (extra plots, summary style)."
               className="mt-1 w-full rounded-lg border px-3 py-2 text-sm resize-y"
-              style={{ borderColor: '#cfd0c9', color: '#16181c' }}
+              style={{ borderColor: '#cfd0c9', color: '#404b63' }}
             />
             <span className="block mt-1 text-[12px]" style={{ color: '#8a8f98' }}>
               Free text. Used by the pre-flight check and passed to the analysis job.
@@ -229,14 +229,14 @@ export default function GwasAgentApp() {
 
         {/* Check */}
         <section>
-          <h2 className="font-display font-semibold text-[15px] mb-3" style={{ color: '#16181c' }}>
+          <h2 className="font-display font-semibold text-[15px] mb-3" style={{ color: '#404b63' }}>
             3 · Pre-flight check
           </h2>
           <button
             onClick={runCheck}
             disabled={!canCheck}
             className="font-display font-medium text-sm px-5 py-2.5 rounded-full flex items-center gap-2 disabled:opacity-40"
-            style={{ background: '#16181c', color: '#f6f6f3' }}
+            style={{ background: '#404b63', color: '#f6f6f3' }}
           >
             {checking ? <Loader2 className="w-4 h-4 animate-spin" /> : <Search className="w-4 h-4" />}
             {checking ? 'Checking…' : 'Check my files and folders'}
@@ -258,7 +258,7 @@ export default function GwasAgentApp() {
         {/* Run */}
         {result && (
           <section>
-            <h2 className="font-display font-semibold text-[15px] mb-3" style={{ color: '#16181c' }}>
+            <h2 className="font-display font-semibold text-[15px] mb-3" style={{ color: '#404b63' }}>
               4 · Run analysis
             </h2>
             {!isLoggedIn ? (
@@ -297,7 +297,7 @@ export default function GwasAgentApp() {
         {/* Tools */}
         <section>
           <div className="flex items-start justify-between gap-4 mb-1">
-            <h2 className="font-display font-semibold text-[15px]" style={{ color: '#16181c' }}>
+            <h2 className="font-display font-semibold text-[15px]" style={{ color: '#404b63' }}>
               Tools the agent runs
             </h2>
             <button
